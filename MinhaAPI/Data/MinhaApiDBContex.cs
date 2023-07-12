@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using MinhaAPI.Models;
+using MinhaAPI.Data.Map;
 
 namespace MinhaAPI.Data
 {
@@ -16,6 +17,9 @@ namespace MinhaAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
+            modelBuilder.ApplyConfiguration(new TarefaMap());
+
             base.OnModelCreating(modelBuilder);
         }
     }

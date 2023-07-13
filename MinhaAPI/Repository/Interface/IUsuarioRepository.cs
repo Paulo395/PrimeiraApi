@@ -7,7 +7,7 @@ namespace MinhaAPI.Repository.Interface
         Task<List<Usuario>> ListarTodosUsuarios();
         Task<Usuario> BuscarPorId(int id);
         Task<Usuario> AdicionarUsuario(Usuario usuario);
-        Task<Usuario> AtualizarUsuario(int id, Usuario usuario);
+        Task<Usuario> AtualizarUsuario(Usuario usuario, int id);
         Task<bool> ApagarUsuario(int id);
     }
 }

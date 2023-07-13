@@ -36,7 +36,7 @@ namespace MinhaAPI.Repository
             return true;
         }
 
-        public async Task<Usuario> AtualizarUsuario(int id, Usuario usuario)
+        public async Task<Usuario> AtualizarUsuario(Usuario usuario, int id)
         {
             Usuario usuarioPorId = await BuscarPorId(id);
 
